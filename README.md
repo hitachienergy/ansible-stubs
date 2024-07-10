@@ -117,3 +117,15 @@ See mypy docs: [Automatic stub generation](https://mypy.readthedocs.io/en/stable
    ```shell
    poetry run mypy ./ansible-stubs/module_utils
    ```
+
+## Releasing a new version
+
+1. Update the version in `pyproject.toml`.
+
+2. Create and push a tag:
+
+   ```shell
+   TAG=v1.0.0
+   git tag $TAG
+   git push origin $TAG
+   ```

@@ -9,7 +9,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "ansible-stubs"
-version = "0.1.0"
+version = "1.0.0"
 description = "Type stubs for ansible-core"
 license = "MIT"
 repository = "https://github.com/hitachienergy/ansible-stubs"
