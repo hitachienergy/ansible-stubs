@@ -1,0 +1,17 @@
+{
+    "recommendations": [
+        // Keep sorted by extension name
+        // {publisherName}.{extensionName}
+        //
+        // Common
+        "esbenp.prettier-vscode",
+        "shardulm94.trailing-spaces",
+        // Markdown
+        "DavidAnson.vscode-markdownlint",
+        // Python
+        "ms-python.mypy-type-checker",
+        "charliermarsh.ruff",
+        // TOML
+        "tamasfe.even-better-toml",
+    ],
+}

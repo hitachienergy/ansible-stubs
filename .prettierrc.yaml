@@ -1,0 +1,14 @@
+overrides:
+  - files:
+      - '.vscode/*.json'
+    options:
+      # https://github.com/prettier/prettier/issues/15553
+      parser: 'json5'
+      quoteProps: 'preserve'
+
+      tabWidth: 4
+      trailingComma: all
+  - files:
+      - '*.yaml'
+    options:
+      singleQuote: true

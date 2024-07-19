@@ -1,0 +1,40 @@
+# Ref: https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# --- Poetry ---
+# Ref: https://python-poetry.org/docs/pyproject/
+
+[tool.poetry]
+name = "ansible-stubs"
+version = "1.0.0"
+description = "Type stubs for ansible-core"
+license = "MIT"
+repository = "https://github.com/hitachienergy/ansible-stubs"
+authors = ["Tomasz Baran"]
+packages = [{ include = "ansible-stubs" }]
+
+[tool.poetry.dependencies]
+# Poetry does not use the [project] table
+# https://typing.readthedocs.io/en/latest/spec/distributing.html#stub-only-packages
+ansible-core = "^2.16"
+python = "^3.10"
+
+# Optional dependencies that are included in the `extras` below
+mypy = { version = "^1.10", optional = true }
+
+[tool.poetry.extras]
+test = [
+    "mypy", # provides stubtest
+]
+
+# --- Ruff ---
+# Ref: https://docs.astral.sh/ruff/configuration/
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.format]
+quote-style = "single"
