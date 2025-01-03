@@ -100,14 +100,18 @@ See mypy docs: [Automatic stub generation](https://mypy.readthedocs.io/en/stable
    - with Poetry:
 
      ```shell
-     poetry run stubtest ansible.module_utils.basic \
+     poetry run stubtest ansible.errors \
+                         ansible.module_utils._test \
+                         ansible.module_utils.basic \
                          ansible.module_utils.common.text.converters
      ```
 
    - with pip:
 
      ```shell
-     stubtest ansible.module_utils.basic \
+     stubtest ansible.errors \
+              ansible.module_utils._test \
+              ansible.module_utils.basic \
               ansible.module_utils.common.text.converters
      ```
 
