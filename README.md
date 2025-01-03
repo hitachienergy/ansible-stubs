@@ -49,13 +49,16 @@ See mypy docs: [Automatic stub generation](https://mypy.readthedocs.io/en/stable
 
    ```shell
    stubgen -m ansible \
+           -m ansible.errors \
            -m ansible.module_utils \
+           -m ansible.module_utils._text \
            -m ansible.module_utils.common \
            -m ansible.module_utils.common.file \
            -m ansible.module_utils.common.text \
            -m ansible.module_utils.common.text.converters \
            -m ansible.module_utils.pycompat24 \
            -m ansible.module_utils.six \
+           -m ansible.module_utils.six.moves.collections_abc \
            -v \
            && \
    stubgen -m ansible.module_utils.basic \

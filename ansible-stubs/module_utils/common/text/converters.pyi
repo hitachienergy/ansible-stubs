@@ -1,4 +1,6 @@
 from _typeshed import Incomplete
+from ansible.module_utils.six import PY3 as PY3, binary_type as binary_type, iteritems as iteritems, text_type as text_type
+from ansible.module_utils.six.moves.collections_abc import Set as Set
 
 __metaclass__ = type
 HAS_SURROGATEESCAPE: bool
