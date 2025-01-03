@@ -49,13 +49,16 @@ See mypy docs: [Automatic stub generation](https://mypy.readthedocs.io/en/stable
 
    ```shell
    stubgen -m ansible \
+           -m ansible.errors \
            -m ansible.module_utils \
+           -m ansible.module_utils._text \
            -m ansible.module_utils.common \
            -m ansible.module_utils.common.file \
            -m ansible.module_utils.common.text \
            -m ansible.module_utils.common.text.converters \
            -m ansible.module_utils.pycompat24 \
            -m ansible.module_utils.six \
+           -m ansible.module_utils.six.moves.collections_abc \
            -v \
            && \
    stubgen -m ansible.module_utils.basic \
@@ -97,14 +100,18 @@ See mypy docs: [Automatic stub generation](https://mypy.readthedocs.io/en/stable
    - with Poetry:
 
      ```shell
-     poetry run stubtest ansible.module_utils.basic \
+     poetry run stubtest ansible.errors \
+                         ansible.module_utils._test \
+                         ansible.module_utils.basic \
                          ansible.module_utils.common.text.converters
      ```
 
    - with pip:
 
      ```shell
-     stubtest ansible.module_utils.basic \
+     stubtest ansible.errors \
+              ansible.module_utils._test \
+              ansible.module_utils.basic \
               ansible.module_utils.common.text.converters
      ```
 
